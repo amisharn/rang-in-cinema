@@ -29,3 +29,17 @@ What did I learn?
 - Correlation is the most suitable for this project as we try to find out how similar the color distributions are in the images
 
 - How to visualize feature vectors using Matplotlib
+
+Day 3
+
+What did i do?
+
+- Built a dataset generation pipeline.
+
+- Used OpenCV to automatically extract frames from movie trailers every two seconds.
+
+What did I learn?
+
+- I used trailers to extract frames from the movie as it would give an accurate representation of the color grading of the whole movie.
+
+- Only extracted frame per 2 second as it would be pretty similar in between.
