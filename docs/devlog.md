@@ -43,3 +43,17 @@ What did I learn?
 - I used trailers to extract frames from the movie as it would give an accurate representation of the color grading of the whole movie.
 
 - Only extracted frame per 2 second as it would be pretty similar in between.
+
+Day 4
+
+What did i do?
+
+- Wrote a script to extract feature vectors from all the images in the dataset.
+
+- Converted that vector and other info like name & path into a pkl file.
+
+What did I learn?
+
+- I learned the use of pathlib objects for file handling.
+
+- I also understood serialization and Deserialization for saving my feature vectors so i do'nt have to recompute it everytime.
