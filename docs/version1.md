@@ -6,4 +6,4 @@ Version 1:
 
 -Extract color histogram of each image and normalize.
 
--Compare against the dataset and retrieve similar.
+-Compare against the dataset and retrieve the top similar frame.
