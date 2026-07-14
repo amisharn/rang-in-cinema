@@ -50,10 +50,24 @@ What did i do?
 
 - Wrote a script to extract feature vectors from all the images in the dataset.
 
-- Converted that vector and other info like name & path into a pkl file.
+- Converted that vector and other info like name & path into a .pkl file.
 
 What did I learn?
 
 - I learned the use of pathlib objects for file handling.
 
 - I also understood serialization and Deserialization for saving my feature vectors so i do'nt have to recompute it everytime.
+
+Day 5
+
+What did i do?
+
+- Wrote a pipeline to compare a test image's feature vector with each one of the feature vector stored in the .pkl file.
+
+- Displayed the top 3 matching frames.
+
+- Version 1 of my color grading similarity search application is completed.
+
+What did i learn?
+
+- The histogram analysis may not be perfect as we are only comparing hue from the hsv values. Feature extraction is very important for accurate results.

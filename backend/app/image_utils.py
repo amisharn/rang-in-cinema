@@ -18,9 +18,9 @@ def convert_to_hsv(img):
     return hsv
 
 def extract_histogram(hsv):
-    hist = cv.calcHist([hsv], [0], None, [6], [0,180])
+    hist = cv.calcHist([hsv], [0], None, [30], [0,180])
     
-    #Convert (6,1) histogram to 1D feature vector (6,)
+    #Convert (30,1) histogram to 1D feature vector (30,)
     hist = hist.flatten() 
     return hist
 
@@ -44,26 +44,26 @@ def compare_hist_opencv(hist1, hist2):
     similarity = cv.compareHist(hist1,hist2,cv.HISTCMP_CORREL)
     return similarity
 
-def plot_histograms(hist1,hist2):
-    labels = ["Red","Yellow","Green","Cyan","Blue","Magenta"]
+# def plot_histograms(hist1,hist2):
+#     labels = ["Red","Yellow","Green","Cyan","Blue","Magenta"]
 
-    x = np.arange(len(labels))
+#     x = np.arange(len(labels))
 
-    width = 0.35
+#     width = 0.35
 
-    plt.figure(figsize=(8,5))
+#     plt.figure(figsize=(8,5))
 
-    plt.bar(x-width/2,hist1,width,label = "Fallen Angels")
-    plt.bar(x+width/2,hist2,width,label = "Chungking Express")
+#     plt.bar(x-width/2,hist1,width,label = "Fallen Angels")
+#     plt.bar(x+width/2,hist2,width,label = "Chungking Express")
 
-    plt.xticks(x,labels)
+#     plt.xticks(x,labels)
 
-    plt.xlabel("Hue Bucket")
-    plt.ylabel ("Normalized Frequency")
-    plt.title ("Hue Distribution")
+#     plt.xlabel("Hue Bucket")
+#     plt.ylabel ("Normalized Frequency")
+#     plt.title ("Hue Distribution")
 
-    plt.legend()
-    plt.show()
+#     plt.legend()
+#     plt.show()
 
 
     
@@ -85,7 +85,7 @@ if __name__ == "__main__":
     else:
         print("Very Different")
 
-    plot_histograms(normalized1,normalized2)
+    # plot_histograms(normalized1,normalized2)
 
 
 
