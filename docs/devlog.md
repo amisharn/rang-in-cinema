@@ -71,3 +71,13 @@ What did i do?
 What did i learn?
 
 - The histogram analysis may not be perfect as we are only comparing hue from the hsv values. Feature extraction is very important for accurate results.
+
+Day 6
+
+What did i do?
+
+- Got started with basic UI. Whatever i did today was for learning i am not keeping it. (I'll buildthe image upload interface for Rang-In-Cinema tomorrow.)
+
+What did i learn?
+
+- Learned the fundamentals of React: components, JSX, props, state, and event handling.
