@@ -1,9 +1,9 @@
 function Header({ title, subtitle }) {
   return (
-    <>
-      <h1>{title}</h1>
-      <h2>{subtitle}</h2>
-    </>
+    <div class="header">
+      <h1 style={{ color: "white" }}>{title}</h1>
+      <h2 style={{ color: "white" }}>{subtitle}</h2>
+    </div>
   );
 }
 
