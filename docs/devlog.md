@@ -81,3 +81,35 @@ What did i do?
 What did i learn?
 
 - Learned the fundamentals of React: components, JSX, props, state, and event handling.
+
+Day 7
+
+What did i do?
+
+- Built the image upload component and preview components.
+
+- Understood UseEffect and URL.createObjectURL().
+
+- Broke the UI into reusable React components.
+
+- Added a search button that's disabled until an image is uploaded.
+
+What did i learn?
+
+- Separation of concerns makes the code cleaner.
+
+- You have to think of edge cases like what if the image doesn't exist.
+
+Day 8
+
+What did i do?
+
+- Built a FastAPI server with image upload support.
+
+- Created an endpoint that accepts an image, compares its color histogram against my feature database, and returns the top 3 matching movie frames as JSON.
+
+What did i learn?
+
+- I learned about multipart form data uploads. For now i'll be storing the uploaded image in a temp folder.
+
+- I also understood the importance of modularity and the structure of a project; separating API, search logic, and database code makes a project easier to maintain.

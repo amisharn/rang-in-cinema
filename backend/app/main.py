@@ -1,36 +1,23 @@
-import pickle
-import image_utils as iu
-import sys
+from fastapi import FastAPI
+from fastapi import UploadFile, File
 from pathlib import Path
+from search import search
 
-db = Path("dataset/features_db/features.pkl")
-test = Path("dataset/test/test.png")
+app = FastAPI()
+TEMP_IMAGE_PATH = Path("./temp/uploaded_img.png")
 
-k = 3
+@app.get("/")
+def home():
+    return {"message": "Server Running!"}
 
-with open (db , "rb") as file:
-    features = pickle.load(file)
-
-
-if test.exists() == False:
-    sys.exit("Couldn't read Image!")
-
-comparison_list = []
-
-input_hist = iu.process_image(test)
-
-for record in features:
-    correlation = iu.compare_hist_opencv(input_hist,record["histogram"])
-    comparison_list.append({"correlation": correlation, "Movie": record["movie_name"], "Frame" : record["location"]})
-
-def find_correlation(record):
-    return record["correlation"]
-
-sorted_list = sorted(comparison_list, key= find_correlation ,reverse=True)
+@app.post("/search")
+async def search_image(file : UploadFile = File(...)):
+    TEMP_IMAGE_PATH.parent.mkdir(parents=True,exist_ok=True)
+    with open (TEMP_IMAGE_PATH, "wb") as image:
+        content = await file.read()
+        image.write(content)
+    results = search(TEMP_IMAGE_PATH)
+    return {"results": results}
 
 
-print(f"Top {k} List: \n ")
-for i in range(k):
-    print(f' {i+1}. Movie Name: {sorted_list[i]["Movie"]} \n Correlation: {sorted_list[i]["correlation"]} \n Frame: {sorted_list[i]["Frame"]}')
 
-    
