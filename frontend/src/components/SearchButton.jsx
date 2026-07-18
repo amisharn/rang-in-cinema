@@ -1,7 +1,7 @@
-function SearchButton({ disabled }) {
+function SearchButton({ disabled, search }) {
   return (
-    <button className="search" disabled={disabled}>
-      Find Similar Movies
+    <button className="search" disabled={disabled} onClick={search}>
+      Find Similar Movie Stills
     </button>
   );
 }

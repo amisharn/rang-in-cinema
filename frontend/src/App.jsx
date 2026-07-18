@@ -4,6 +4,7 @@ import Footer from "./components/Footer.jsx";
 import ImageUpload from "./components/ImageUpload.jsx";
 import Preview from "./components/Preview.jsx";
 import Search from "./components/SearchButton.jsx";
+import Results from "./components/Results.jsx";
 import { useState, useEffect } from "react";
 import SearchButton from "./components/SearchButton.jsx";
 
@@ -11,6 +12,7 @@ function App() {
   const [title, setTitle] = useState("Rang-In-Cinema");
   const [image, setImage] = useState(null);
   const [previewURL, setPreviewURL] = useState(null);
+  const [results, setResults] = useState([]);
 
   useEffect(() => {
     if (image == null) {
@@ -23,6 +25,18 @@ function App() {
     };
   }, [image]);
 
+  async function handleSearch() {
+    const formData = new FormData();
+    formData.append("file", image);
+    const response = await fetch("http://127.0.0.1:8000/search", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await response.json();
+    setResults(data.results);
+    console.log(data.results);
+  }
+
   return (
     <div className="app">
       <Header title={title} subtitle="Find Movies With Similar Colors" />
@@ -30,7 +44,8 @@ function App() {
       <p>Selected:</p>
       <p>{image && image.name}</p>
       <Preview url={previewURL} />
-      <SearchButton disabled={image === null} />
+      <SearchButton disabled={image === null} search={handleSearch} />
+      <Results results={results} />
       <Footer />
     </div>
   );

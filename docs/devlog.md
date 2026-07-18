@@ -113,3 +113,21 @@ What did i learn?
 - I learned about multipart form data uploads. For now i'll be storing the uploaded image in a temp folder.
 
 - I also understood the importance of modularity and the structure of a project; separating API, search logic, and database code makes a project easier to maintain.
+
+Day 9
+
+What did i do?
+
+- Connected my React frontend to a FastAPI backend.
+
+- Implemented image uploads from the UI.
+
+- Displayed the top matching movie frames based on color similarity.
+
+- Version 1 has a fully working interface now!
+
+What did i learn?
+
+- Frontend and backend communicate using HTTP requests.
+
+- CORS exists so that frontend and backend running in different origin can share their resources.

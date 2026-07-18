@@ -1,7 +1,7 @@
 function ImageUpload({ setImage }) {
   return (
     <>
-      <label htmlFor="upload" class="upload-box">
+      <label htmlFor="upload" className="upload-box">
         Upload
       </label>
       <input
