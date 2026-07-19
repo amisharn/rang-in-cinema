@@ -1,3 +1,6 @@
 opencv-python==5.0.0.93
 numpy==2.2.6
 matplotlib==3.10.9
+uvicorn==0.51.0
+python-multipart==0.0.32
+fastapi==0.139.2

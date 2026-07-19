@@ -28,7 +28,7 @@ function App() {
   async function handleSearch() {
     const formData = new FormData();
     formData.append("file", image);
-    const response = await fetch("http://127.0.0.1:8000/search", {
+    const response = await fetch("http://backend:8000/search", {
       method: "POST",
       body: formData,
     });

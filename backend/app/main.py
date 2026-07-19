@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi import UploadFile, File
 from pathlib import Path
-from search import search
+from app.search import search
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 

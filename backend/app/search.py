@@ -1,5 +1,5 @@
-from database import load_features
-import image_utils as iu
+from app.database import load_features
+import app.image_utils as iu
 from fastapi import HTTPException
 
 def search (query_image, k = 3):

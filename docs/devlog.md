@@ -131,3 +131,15 @@ What did i learn?
 - Frontend and backend communicate using HTTP requests.
 
 - CORS exists so that frontend and backend running in different origin can share their resources.
+
+Day 10
+
+What did i do?
+
+- Dockerized the FastAPI backend and React frontend.
+
+What did i learn?
+
+- I learned that Docker packages the entire application with its environment.
+
+- Dockerfile gives instructions on what to do, Docker Image builds an image of the application but it's not yet running, Docker container is the running instance of Docker Image and Docker compose helps to run all Docker Container at once with a single command.
