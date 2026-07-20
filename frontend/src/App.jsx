@@ -28,7 +28,9 @@ function App() {
   async function handleSearch() {
     const formData = new FormData();
     formData.append("file", image);
-    const response = await fetch("http://localhost:8000/search", {
+    const API_URL = import.meta.env.VITE_API_URL;
+
+    const response = await fetch(`${API_URL}/search`, {
       method: "POST",
       body: formData,
     });

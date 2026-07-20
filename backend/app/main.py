@@ -11,7 +11,7 @@ app = FastAPI()
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-app.add_middleware(CORSMiddleware, allow_origins = ["http://localhost:5173"], allow_credentials = True, allow_methods = ["*"], allow_headers = ["*"] )
+app.add_middleware(CORSMiddleware, allow_origins = ["http://localhost:5173","https://rang-in-cinema.vercel.app"], allow_credentials = True, allow_methods = ["*"], allow_headers = ["*"] )
 app.mount ("/frames", StaticFiles(directory=BASE_DIR/"dataset"/"frames"),name="frames")
 
 TEMP_IMAGE_PATH = Path("./temp/uploaded_img.png")
