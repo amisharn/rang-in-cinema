@@ -1,4 +1,6 @@
 function Results({ results }) {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   return (
     <>
       <p>Results:</p>
@@ -6,10 +8,7 @@ function Results({ results }) {
       <ul className="list">
         {results.map((item) => {
           const url = item.Frame;
-          const new_url = url.replace(
-            "dataset/frames/",
-            "http://127.0.0.1:8000/frames/",
-          );
+          const new_url = url.replace("dataset/frames/", `${API_URL}/frames/`);
 
           return (
             <li key={item.Frame}>
@@ -22,4 +21,5 @@ function Results({ results }) {
     </>
   );
 }
+
 export default Results;
