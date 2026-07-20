@@ -2,11 +2,11 @@ FROM node:22
 
 WORKDIR /frontend
 
-COPY frontend/package*.json ./
+COPY package*.json ./
 
 RUN npm ci
 
-COPY frontend .
+COPY . .
 
 EXPOSE 5173
 
