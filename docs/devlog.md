@@ -143,3 +143,19 @@ What did i learn?
 - I learned that Docker packages the entire application with its environment.
 
 - Dockerfile gives instructions on what to do, Docker Image builds an image of the application but it's not yet running, Docker container is the running instance of Docker Image and Docker compose helps to run all Docker Container at once with a single command.
+
+Day 11
+
+What did i do?
+
+- Connected services with Docker Compose
+
+- Deployed to Render + Vercel
+
+- Rang-In-Cinema is officially live.
+
+What did i learn?
+
+- Docker Compose lets multiple containers communicate over a shared network
+
+- Production deployments require different API endpoints than local development
