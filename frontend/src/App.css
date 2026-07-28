@@ -3,9 +3,9 @@
   justify-content: center;
   align-items: center;
 
-  font-size: 24px;
+  font-size: 20px;
 
-  width: 350px;
+  width: 300px;
   height: 50px;
 
   border: 2px solid rgb(255, 211, 130);
@@ -51,7 +51,6 @@
   object-fit: cover;
 }
 
-.preview,
 .results {
   height: 350px;
   width: 350px;
@@ -89,7 +88,7 @@
   align-items: center;
   padding: 50px;
 
-  gap: 800px;
+  gap: 50px;
 }
 
 .content {
@@ -105,4 +104,10 @@
   font-size: 100px;
   color: orange;
   margin: 50px;
+}
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
