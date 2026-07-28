@@ -1,4 +1,5 @@
 # Rang-In-Cinema
+
 ### रङ्गीन सिनेमा / रङ-इन-सिनेमा
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
@@ -22,12 +23,6 @@ https://rang-in-cinema.vercel.app/
 > **Note:** The backend is hosted on Render's free tier. The first request after inactivity may take 30–60 seconds while the server wakes up.
 
 ---
-
-## Screenshots
-
-### Upload Image
-
-![Upload](docs/image_upload.png)
 
 ### Search Results
 
