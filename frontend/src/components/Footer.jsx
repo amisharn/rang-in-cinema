@@ -1,7 +1,9 @@
 function Footer() {
   return (
     <>
-      <h5>Made with OpenCV</h5>
+      <footer className="footer">
+        <p>© 2026 Rang-In-Cinema.</p>
+      </footer>
     </>
   );
 }

@@ -3,8 +3,6 @@ function Results({ results }) {
 
   return (
     <>
-      <p>Results:</p>
-
       <ul className="list">
         {results.map((item) => {
           const url = item.Frame;
