@@ -2,7 +2,7 @@ from app.database import load_features
 import app.image_utils as iu
 from fastapi import HTTPException
 
-def search (query_image, k = 3):
+def search (query_image, k = 4):
     comparison_list =[]
     features = load_features()
     if not query_image.exists():
